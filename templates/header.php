@@ -5,6 +5,7 @@
     require_once "models/message.php";
     require_once "dao/userDAO.php";
     
+    
     $message = new Message($BASE_URL);
     $flassMessage = $message->getMessage();
 
@@ -61,10 +62,12 @@
                         <a href="<?= $BASE_URL ?>/dashboard.php" class="nav-link">Meus filmes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>/auth.php" class="nav-link">Entrar / Cadastrar</a>
+                        <a href="<?= $BASE_URL ?>/editprofile.php" class="nav-link">
+                            <?= $userData->name ?>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>/auth.php" class="nav-link">Entrar / Cadastrar</a>
+                        <a href="<?= $BASE_URL ?>/logout.php" class="nav-link">Sair</a>
                     </li>
                     <?php else: ?> 
 
