@@ -54,24 +54,40 @@ if($type === "register") {
             }else {
                 
             //mensagem de email já cadastrado
-            $message->setMEssage("Usuário já cadastrado, tente outro email!!", "error", "back");
+            $message->setMessage("Usuário já cadastrado, tente outro email!!", "error", "back");
 
             }
         }else {
         
         //mensagem de erro de senha
-        $message->setMEssage("Senhas não conferem!", "error", "back");
+        $message->setMessage("Senhas não conferem!", "error", "back");
 
         }
 
     }else {
 
         //mensagem de erro de envio
-        $message->setMEssage("Preecha todos os campos!!", "error", "back");
+        $message->setMessage("Preecha todos os campos!!", "error", "back");
     }
 
 
 }else if ($type === "login") {
-    
 
+    $email = filter_Input(INPUT_POST, "email");
+    $password = filter_Input(INPUT_POST, "password");
+
+    //Tenta autenticar usuário
+    if($userDao->authenticateUser($email, $password)) {
+        //Redireciona o usuário caso não autentique
+        $message->setMessage("Seja bem vindo!!", "success", "/editprofile.php");
+        
+    }else {
+        
+        $message->setMessage("Usuário ou senha incorretos!!", "error", "back");
+    }
+
+}else {
+
+      //mensagem de erro de envio
+    $message->setMessage("Informações invalidas!!", "error", "/index.php");
 }
