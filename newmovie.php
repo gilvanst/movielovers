@@ -36,12 +36,24 @@
                 <div class="form-group">
                     <label for="category">Categoria</label>
                     <select name="category" id="category" class="form-control">
-                        <option value="">Ação</option>
-                        <option value="">Aventura</option>
-                        <option value="">Drama</option>
+                        <option value="">Selecione</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Drama">Drama</option>
                     </select>
                     
                 </div>
+
+                <div class="form-group">
+                    <label for="Trailer">Trailer</label>
+                    <input type="text" name="Trailer" id="Trailer" class="form-control" placeholder="Insira o link do trailer">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <textarea name="description" id="description" rows="5" class="form-control" placeholder="Descreva o filme...."></textarea>
+                </div>
+
+                <input type="submit" value="Adicionar filme" class="btn card-btn">
             </form>
         </div>
     </div>
