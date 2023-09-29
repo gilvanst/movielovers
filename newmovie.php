@@ -37,8 +37,32 @@
                     <label for="category">Categoria</label>
                     <select name="category" id="category" class="form-control">
                         <option value="">Selecione</option>
+                        <option value="Ação">Ação</option>
+                        <option value="Animação">Animação</option>
                         <option value="Aventura">Aventura</option>
+                        <option value="Biografia">Biografia</option>
+                        <option value="Comédia">Comédia</option>
+                        <option value="Comédia Romântica">Comédia Romântica</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Cult">Cult</option>
+                        <option value="Documentário">Documentária</option>
                         <option value="Drama">Drama</option>
+                        <option value="Espionagem">Espionagem</option>
+                        <option value="Família">Família</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Faroeste">Faroeste</option>
+                        <option value="Ficção Científica">Ficção Científica</option>
+                        <option value="Guerra">Guerra</option>
+                        <option value="História">História</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Mistério">Mistério</option>
+                        <option value="Religioso">Religioso</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Western">Western</option>
+                
                     </select>
                     
                 </div>
