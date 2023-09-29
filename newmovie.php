@@ -1,5 +1,5 @@
 <?php
-    require_once "templates/header.php"; 
+         require_once "templates/header.php"; 
 
     //VErifica se usuário está autenticado
     require_once "dao/userDAO.php";
