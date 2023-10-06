@@ -9,6 +9,7 @@
 
     $message = new Message($BASE_URL);
     $userDao = new UserDAO($conn, $BASE_URL);
+    $movieDao = new MovieDAO($conn, $BASE_URL);
 
     //Resgata o tipo do fomulário
 
@@ -37,6 +38,7 @@
             $movie->trailer = $trailer;
             $movie->category = $category;
             $movie->length = $length;
+            $movie->users_id = $userData->id;
 
             //Upload da imagem
 
