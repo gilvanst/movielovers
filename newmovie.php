@@ -2,7 +2,7 @@
         require_once "templates/header.php"; 
 
     //VErifica se usuário está autenticado
-      require_once "dao/userDAO.php";
+    require_once "dao/userDAO.php";
     require_once "models/user.php";
 
     $user = new User();
