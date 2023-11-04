@@ -38,10 +38,10 @@
                     <?php foreach($userMovies as $movie): ?>
                     <tr>
                         <td scope="row"><?= $movie->id ?></td>
-                        <td><a href="<?= $BASE_URL ?>/movies.php?id<?= $movie->id ?>" class="table-movie-title"><?= $movie->title ?></a></td>
+                        <td><a href="<?= $BASE_URL ?>/movies.php?id=<?= $movie->id ?>" class="table-movie-title"><?= $movie->title ?></a></td>
                         <td><i class="fas fa-star"></i>9</td>
                         <td class="actions-column">
-                            <a href="<?= $BASE_URL ?>/editmovie.php?id<?= $movie->id ?>" class="edit-btn">
+                            <a href="<?= $BASE_URL ?>/editmovie.php?id=<?= $movie->id ?>" class="edit-btn">
                                 <i class="far fa-edit"></i> Editar
                             </a>
 

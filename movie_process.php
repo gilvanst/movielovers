@@ -110,7 +110,38 @@
         }
 
         
-    }else {
+    }else if($type === "update") {
+        //Receber os dados do input
+        $title  = filter_input(INPUT_POST, "title");
+        $description  = filter_input(INPUT_POST, "description");
+        $trailer  = filter_input(INPUT_POST, "trailer");
+        $category  = filter_input(INPUT_POST, "category");
+        $length  = filter_input(INPUT_POST, "length");
+        $id  = filter_input(INPUT_POST, "id");
+
+        $movieData = $movieDao->findById($id);
+
+        //verifica se encontra o filme
+
+        if($movie) {
+            //Verifica se o filme é do usúario
+            if($movie->users_id === $userData->id) {
+                //altera 
+                $movieData->title = $title;
+                
+
+            }else {
+
+                $message->setMessage("Informações inválidas!", "error", "/index.php");
+            }
+
+        }else {
+
+            $message->setMessage("Informações inválidas!", "error", "/index.php");
+        }
+
+    
+}else {
         
         $message->setMessage("Informações inválidas!", "error", "/index.php");
     }
