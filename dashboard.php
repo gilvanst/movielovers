@@ -4,10 +4,15 @@
     //VErifica se usuário está autenticado
     require_once "dao/userDAO.php";
     require_once "models/user.php";
+    require_once "dao/movieDAO.php";
 
     $user = new User();
-    new UserDAO($conn, $BASE_URL);
-    $userData = $userDao->verifyToken();
+    $userDao = new UserDAO($conn, $BASE_URL);
+    $movieDao = new MovieDAO($conn, $BASE_URL);
+
+    $userData = $userDao->verifyToken(true);
+
+    $userMovies = $movieDao->getMoviesByUserId($userData->id);
 
 ?>
 
@@ -30,22 +35,26 @@
                     <th scope="col" class="action-column">Ações</th>
                 </thead>
                 <tbody>
+                    <?php foreach($userMovies as $movie): ?>
                     <tr>
-                        <td scope="row">1</td>
-                        <td><a href="" class="table-movie-title">Título</a></td>
+                        <td scope="row"><?= $movie->id ?></td>
+                        <td><a href="<?= $BASE_URL ?>/movies.php?id<?= $movie->id ?>" class="table-movie-title"><?= $movie->title ?></a></td>
                         <td><i class="fas fa-star"></i>9</td>
                         <td class="actions-column">
-                            <a href="" class="edit-btn">
+                            <a href="<?= $BASE_URL ?>/editmovie.php?id<?= $movie->id ?>" class="edit-btn">
                                 <i class="far fa-edit"></i> Editar
                             </a>
 
-                            <form action="">
+                            <form action="<?= $BASE_URL ?>/movie_process.php" method="POST">
+                                <input type="hidden" name="type" value="delete">
+                                <input type="hidden" name="id" value="<?= $movie->id ?>">
                                 <button type="submit" class="delete-btn">
                                     <i class="fas fa-times"></i>Deletar
                                 </button>
                             </form>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

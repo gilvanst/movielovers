@@ -69,7 +69,7 @@
 
                 <div class="form-group">
                     <label for="Trailer">Trailer</label>
-                    <input type="text" name="Trailer" id="Trailer" class="form-control" placeholder="Insira o link do trailer">
+                    <input type="text" name="trailer" id="Trailer" class="form-control" placeholder="Insira o link do trailer">
                 </div>
 
                 <div class="form-group">
