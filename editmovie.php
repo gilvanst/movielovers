@@ -1,7 +1,7 @@
 <?php
-        require_once "templates/header.php"; 
 
-    //VErifica se usuário está autenticado
+    require_once "templates/header.php"; 
+
     require_once "dao/userDAO.php";
     require_once "dao/movieDAO.php";
     require_once "models/user.php";
@@ -111,7 +111,7 @@
                     <input type="submit" value="Editar filme" class="btn card-btn">
                 </form>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3 offset-large">
                 <div class="movie-image-container" style="background-image: url('<?= $BASE_URL ?>/img/movies/<?= $movie->image ?>')">
 
                 </div>

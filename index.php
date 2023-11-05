@@ -17,7 +17,7 @@ $comedyMovies = $movieDao->getMoviesByCategorys("Comédia");
     <p class="section-description">Veja as Críticas dos últimos filmes adicionados</p>
     <div class="movies-container">
 
-        <?php foreach ($latestMovies as $movies) : ?>
+        <?php foreach ($latestMovies as $movie) : ?>
 
             <?php require "templates/movie_card.php"; ?>
 
@@ -34,7 +34,7 @@ $comedyMovies = $movieDao->getMoviesByCategorys("Comédia");
     <p class="section-description">Veja os melhores filmes de comédia</p>
     <div class="movies-container">
 
-        <?php foreach ($comedyMovies as $movies) : ?>
+        <?php foreach ($comedyMovies as $movie) : ?>
 
             <?php require "templates/movie_card.php"; ?>
 
@@ -51,7 +51,7 @@ $comedyMovies = $movieDao->getMoviesByCategorys("Comédia");
     <p class="section-description">Veja os melhores filmes de comédia</p>
     <div class="movies-container">
         
-        <?php foreach ($actionMovies as $movies) : ?>
+        <?php foreach ($actionMovies as $movie) : ?>
 
             <?php require "templates/movie_card.php"; ?>
 

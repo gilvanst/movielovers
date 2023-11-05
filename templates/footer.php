@@ -14,12 +14,12 @@
         </div>
         <div id="footer-links-container">
             <ul>
-                <li><a href="#">Adicionar Filme</a></li>
+                <li><a href="<?= $BASE_URL ?>/newmovie.php">Adicionar Filme</a></li>
                 <li><a href="#">Adicionar Crítica</a></li>
                 <li><a href="#">Entrar / Registrar</a></li>
             </ul>
         </div>
-        <p>&copy; 2023 Gilvan Santos</p>
+        <p>&copy; 2023 Gilvan Santos, Mariana Andrade e Julya</p>
 
     </footer>
     
