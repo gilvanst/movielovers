@@ -17,7 +17,6 @@
 ?>
 
     <div class="container-fluid" id="main-container">
-        <h1>Dashboard</h1>
         <h2 class="section-title">Dashboard</h2>
         <p class="section-description">Adicione ou atualize as informações dos filmes</p>
         <div class="col-md-12" id="add-movie-container">

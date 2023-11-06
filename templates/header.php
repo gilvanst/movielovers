@@ -38,8 +38,7 @@
     <header>
         <nav id="main-navbar" class="navbar navbar-expand-lg">
             <a href="<?= $BASE_URL ?>" class="navbar-brand">
-            <img src="<?= $BASE_URL?>/img/logo.svg" alt="MovieLovers" id="logo">
-            <span id="movielovers-title">MovieLovers</span>
+            <img src="<?= $BASE_URL?>/img/logo10.png" alt="MovieLovers" id="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="colapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>

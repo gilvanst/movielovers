@@ -9,11 +9,14 @@ $movieDao = new MovieDAO($conn, $BASE_URL);
 //Categorias de filmes
 $latestMovies = $movieDao->getLatestMovies();
 $actionMovies = $movieDao->getMoviesByCategorys("Ação");
-$comedyMovies = $movieDao->getMoviesByCategorys("Comédia");
+$adventureMovies = $movieDao->getMoviesByCategorys("Aventura");
+$animationMovies = $movieDao->getMoviesByCategorys("Animação");
+$scienceMovies = $movieDao->getMoviesByCategorys("Ficção Científica");
+$terrorMovies = $movieDao->getMoviesByCategorys("Terror");
 ?>
 
 <div id="main-container" class="container-fluid">
-    <h2 class="section-title">Filmes novos</h2>
+    <h2 class="section-title">Novos Filmes</h2>
     <p class="section-description">Veja as Críticas dos últimos filmes adicionados</p>
     <div class="movies-container">
 
@@ -30,23 +33,7 @@ $comedyMovies = $movieDao->getMoviesByCategorys("Comédia");
         <?php endif; ?>
     </div>
 
-    <h2 class="section-title">Comédia</h2>
-    <p class="section-description">Veja os melhores filmes de comédia</p>
-    <div class="movies-container">
-
-        <?php foreach ($comedyMovies as $movie) : ?>
-
-            <?php require "templates/movie_card.php"; ?>
-
-        <?php endforeach; ?>
-
-        <?php if (count($comedyMovies) === 0) : ?>
-
-            <p class="empty-list">Ainda não há filmes cadastrados!</p>
-
-        <?php endif; ?>
-    </div>
-
+    
     <h2 class="section-title">Ação</h2>
     <p class="section-description">Veja os melhores filmes de comédia</p>
     <div class="movies-container">
@@ -58,6 +45,74 @@ $comedyMovies = $movieDao->getMoviesByCategorys("Comédia");
         <?php endforeach; ?>
 
         <?php if (count($actionMovies) === 0) : ?>
+
+            <p class="empty-list">Ainda não há filmes cadastrados!</p>
+
+        <?php endif; ?>
+    </div>
+
+    <h2 class="section-title">Aventura</h2>
+    <p class="section-description">Veja os melhores filmes de comédia</p>
+    <div class="movies-container">
+
+        <?php foreach ($adventureMovies as $movie) : ?>
+
+            <?php require "templates/movie_card.php"; ?>
+
+        <?php endforeach; ?>
+
+        <?php if (count($adventureMovies) === 0) : ?>
+
+            <p class="empty-list">Ainda não há filmes cadastrados!</p>
+
+        <?php endif; ?>
+    </div>
+
+    <h2 class="section-title">Animação</h2>
+    <p class="section-description">Veja os melhores filmes de comédia</p>
+    <div class="movies-container">
+        
+        <?php foreach ($animationMovies as $movie) : ?>
+
+            <?php require "templates/movie_card.php"; ?>
+
+        <?php endforeach; ?>
+
+        <?php if (count($animationMovies) === 0) : ?>
+
+            <p class="empty-list">Ainda não há filmes cadastrados!</p>
+
+        <?php endif; ?>
+    </div>
+
+    <h2 class="section-title">Ficção Científica</h2>
+    <p class="section-description">Veja os melhores filmes de comédia</p>
+    <div class="movies-container">
+        
+        <?php foreach ($scienceMovies as $movie) : ?>
+
+            <?php require "templates/movie_card.php"; ?>
+
+        <?php endforeach; ?>
+
+        <?php if (count($scienceMovies) === 0) : ?>
+
+            <p class="empty-list">Ainda não há filmes cadastrados!</p>
+
+        <?php endif; ?>
+    </div>
+
+    <h2 class="section-title">Terror</h2>
+    <p class="section-description">Veja os melhores filmes de comédia</p>
+    <div class="movies-container">
+        
+        <?php foreach ($terrorMovies as $movie) : ?>
+
+            <?php require "templates/movie_card.php"; ?>
+
+        <?php endforeach; ?>
+
+        <?php if (count($terrorMovies) === 0) : ?>
 
             <p class="empty-list">Ainda não há filmes cadastrados!</p>
 

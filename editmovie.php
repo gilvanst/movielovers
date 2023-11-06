@@ -45,7 +45,7 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6 offset-md-1">
-                <h1><?= $movie->title ?></h1>
+                <h1 id="color-title"><?= $movie->title ?></h1>
                 <p class="page-description">Altere os dados do filme cadastrado</p>
                 <form action="<?= $BASE_URL ?>/movie_process.php" id="edit-movie-form" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="type" value="update">

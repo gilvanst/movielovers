@@ -22,7 +22,7 @@
                 <input type="hidden" name="type" value="update">
                 <div class="row">
                     <div class="col-md-4">
-                        <h1><?= $fullName ?></h1>
+                        <h1 id="color-title"><?= $fullName ?></h1>
                         <p class="page-description">Altere seus dados abaixo:</p>
                         <div class="form-group">
                             <label for="name">Nome:</label>
@@ -55,7 +55,7 @@
             </form>
             <div class="row" id="change-password-container">
                 <div class="col-md-4">
-                    <h2>Alterar senha</h2>
+                    <h2 id="color-title">Alterar senha</h2>
                     <p class="page-description">Digite a nova senha e confirme para alterar</p>
                     <form action="<?= $BASE_URL ?>/user_process.php" method="POST">
                         <input type="hidden" name="type" value="changepassword">

@@ -19,7 +19,7 @@
                 <li><a href="<?= $BASE_URL ?>">Entrar / Registrar</a></li>
             </ul>
         </div>
-        <p>&copy; 2023 Gilvan Santos, Mariana Andrade e Julya</p>
+        <p>&copy; 2023 Gilvan Santos, Mariana Andrade e Julya Ferreira</p>
 
     </footer>
     

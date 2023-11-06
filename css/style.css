@@ -1,19 +1,25 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+ 
+    *{
+        font-family: 'Roboto', sans-serif, bold;
+    }
     /* Navbar */
     .navbar-brand {
         position: relative;
     }
     
     #logo {
-        width: 50px;
+        width: 100%;
+        height: auto;
+        margin-right: -500px ;
     }
     
     #movielovers-title {
-        color: #fff;
-        position: absolute;
-        bottom: -2px;
-        font-size: 30px;
-        left: 55px;
+        color: #FFF;
+        
+        
         font-weight: bold;
+        font-family: 'Roboto', sans-serif;
     }
     
     #main-navbar {
@@ -25,7 +31,7 @@
         background-color: #FFF;
         border-radius: 5px;
         width: 50%;
-        margin-left: 180px;
+        margin-left: 170px;
     }
     
     #search-form .form-control {
@@ -49,7 +55,7 @@
     }
     
     .navbar-nav .nav-item .nav-link:hover {
-        color: #999;
+        color: #DA1918;
     }
     
     .bold {
@@ -57,7 +63,7 @@
     }
     
     .msg-container {
-        background-color: #000;
+        background-color: #000000;
         padding: 15px;
     }
     
@@ -65,7 +71,7 @@
         width: 60%;
         margin: 0 auto;
         padding: 10px;
-        border: solid 1px #000;
+        border: solid 1px #000000;
         text-align: center;
     }
     
@@ -83,7 +89,7 @@
     
     /* Home */
     #main-container {
-        background-color: #000;
+        background-color: #000000;
         color: #FFF;
         min-height: 65vh;
         padding: 40px;
@@ -91,7 +97,7 @@
     
     .section-title {
         font-size: 24px;
-        border-left: 4px solid #F5C518;
+        border-left: 4px solid #DA1918;
         padding-left: 12px;
         margin-top: 20px;
     }
@@ -132,7 +138,7 @@
     }
     
     .fas.fa-star {
-        color: #F5C518;
+        color: #E2D56C;
     }
     
     .rating {
@@ -141,16 +147,17 @@
     
     .rate-btn {
         margin-bottom: 15px;
-        color: #5799EF;
-        background-color: #333;
-        border-color: #333;
+        color: #DA1918;
+        background-color: #E2D56C;
+        border-color: #E2D56C;
         width: 100%;
         font-weight: bold;
     }
     
     .rate-btn:hover {
-        background-color: #444;
-        border-color: #444;
+        background-color:  transparent;
+        border-color: #E2D56C;
+        color: #E2D56C;
     }
     
     .empty-list {
@@ -168,7 +175,7 @@
     #login-container h2,
     #register-container h2 {
         text-align: center;
-        border-bottom: 2px solid #F5C518;
+        border-bottom: 2px solid #DA1918;
         width: 200px;
         margin: 0 auto;
         padding: 10px;
@@ -181,16 +188,16 @@
     }
     
     .card-btn {
-        color: #000;
-        background-color: #F5C518;
-        border: 2px solid #F5C518;
+        color: #E2D56C;
+        background-color: #DA1918;
+        border: 2px solid #DA1918;
         width: 100%;
     }
     
     .card-btn:hover {
         background-color: transparent;
-        color: #F5C518;
-        border-color: #F5C518;
+        color: #DA1918;
+        border-color: #DA1918;
     }
     
     /* Edit Profile */
@@ -198,7 +205,7 @@
     .profile-image-container {
         width: 150px;
         height: 150px;
-        border: 6px solid #F5C518;
+        border: 6px solid #DA1918;
         border-radius: 100%;
         background-size: cover;
         background-position: center;
@@ -208,6 +215,10 @@
     .profile-image-container {
         width: 70px;
         height: 70px;
+    }
+
+    #color-title {
+        color:#DA1918;
     }
     
     .page-description {
@@ -289,11 +300,15 @@
         background-position: center;
         background-size: cover;
     }
+
+    .page-title {
+        color: #FFF;
+    }
     
     .page-title:after {
         content: "";
         width: 300px;
-        border-bottom: 2px solid #F5C518;
+        border-bottom: 2px solid #DA1918;
         display: block;
         margin: 0 auto;
         padding-top: 7px;
@@ -306,6 +321,7 @@
     
     .movie-details {
         margin: 25px 0;
+        color: #DA1918
     }
     
     .pipe {
@@ -330,7 +346,7 @@
     #reviews-container {
         margin-top: 20px;
         padding-top: 20px;
-        border-top: 4px solid #F5C518;
+        border-top: 4px solid #DA1918;
     }
     
     .review {
@@ -343,7 +359,7 @@
     }
     
     .author-name a {
-        color: #F5C518;
+        color: #DA1918;
     }
     
     .comment-title {
@@ -374,7 +390,7 @@
     }
     
     .table-movie-title:hover {
-        color: #F5C518;
+        color: #E2D56C;
     }
     
     .actions-column {
@@ -397,13 +413,13 @@
     }
     
     .edit-btn {
-        background-color: #0DCAF0;
+        background-color: #E2D56C;
         color: #FFF;
     }
     
     .edit-btn:hover {
         background-color: transparent;
-        color: #0DCAF0;
+        color: #E2D56C;
         text-decoration: none;
     }
     
@@ -425,12 +441,12 @@
     
     #search-result,
     .back-link {
-        color: #F5C518;
+        color: #E2D56C;
     }
     
     /* Footer */
     #footer {
-        background-color: #000;
+        background-color: #000000;
         color: #FFF;
         text-align: center;
         margin: 0;
@@ -565,7 +581,7 @@
         }
     
         .fas.fa-bars {
-        color: #F5C518;
+        color: #E2D56C;
         }
     
     }
