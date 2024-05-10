@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23/09/2023 às 06:03
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 10/05/2024 às 15:32
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,6 +37,17 @@ CREATE TABLE `movies` (
   `length` varchar(50) DEFAULT NULL,
   `users_id` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Despejando dados para a tabela `movies`
+--
+
+INSERT INTO `movies` (`id`, `title`, `description`, `image`, `trailer`, `category`, `length`, `users_id`) VALUES
+(1, 'Duna: Parte 2', '\"Duna: Parte Dois\" continua a explorar a viagem de Paul Atreides que agora se une a Chani e aos Fremen para vingar a conspiração que destruiu a sua família. Ao enfrentar uma escolha entre o amor e o destino do universo, lutará para evitar o futuro terrível que só ele pode prever.', 'e7160346618b228746a87d6952f79cb240ddc0907afd2b3a8b5a8f5206476123ff86d58668ff1a3c1cc305f43ecab8b1770f13ba9442b9515c7af67a.jpeg', 'https://www.youtube.com/embed/QqmbrvluQRA?si=_ssolSvw5EglghTl', 'Aventura', '2h 46m', 5),
+(2, 'O Panda do Kung Fu 4', 'Po está prestes a tornar-se o novo líder espiritual do Vale da Paz, mas antes disso, ele deve encontrar um sucessor para se tornar o novo Guerreiro Dragão. Parece que ele encontra um em Zhen, uma raposa com muitas habilidades promissoras, mas que não gosta muito da ideia de Po treiná-lo.', '5ecc78fa9454bf000dd79cf926f8ce6695943bbd612f7b50d49d2fa3e831e0239743c0a57722da5ecf60e7c64596a0d6f79508629f214461c71dfcb8.jpeg', 'https://www.youtube.com/embed/cEAxQE9Xqdg?si=wyhOKKVVLUbGbZKM', 'Animação', '', 5),
+(3, 'Parasitas', 'Ki-taek tem uma família unida, mas estão todos desempregados e as suas perspectivas futuras são negras. O filho Ki-woo é recomendado por um amigo para dar explicações bem pagas, o que vem desencadear a esperança de um rendimento regular na família. Portador das expectativas familiares, Ki-woo dirige-se à casa dos Park para uma entrevista de trabalho. Chegado à casa do Sr. Park, Ki-woo conhece Yeon-kyo, a bela e jovem dona da casa. Este primeiro encontro entre as duas famílias vai provocar uma imparável cadeia de incidentes.', 'e88605ab1366a9b628248d6f26167eae8b8fd7d227fe926b96744059dc274c629448a9f8af9a6038ad7aaed3c449ad70ed99cc903143017f2ca481a1.jpeg', 'https://player.vimeo.com/video/353327242?h=33554ec9b2', 'Terror', '2h 12m', 5),
+(4, 'A Viagem de Chihiro', 'Chihiro é uma menina de 10 anos e está em mudanças com a família, para uma nova casa nos subúrbios, quando o seu pai decide ir por um atalho, uma estrada escura e isolada. Depois de saírem do carro e entrar a pé numa pequena vereda, descobrem um restaurante ao ar livre, com muita comida, mas sem empregador ou clientes. Os pais não hesitam e sentam-se, mas Chihiro pressente o perigo e recusa. À medida que a noite avança, Chihiro está aterrorizada por ver em todo a lado caras medonhas de espíritos e formas que se animam...', 'ea5c5fc8a7d931f7181ab2857490612ec249f402872b915b99c860dcc4e48430af86efb5bc102bfe95ff4c99b04bb41f72f4073d554747c1677986da.jpeg', 'https://www.youtube.com/embed/B65Di3WrT18?si=qRPXpnkofdFr0teu', 'Animação', '2h 5m', 5),
+(5, 'Oppenheimer', 'A história do envolvimento de J. Robert Oppenheimer na criação da bomba atómica durante a Segunda Guerra Mundial.', 'a65c17efb537bd0f49d92206d063bf8dd12ea50697c935fdab6d188ec7b5a4e40c6917c4b2e1a6e0d1a652a050d8abc93456f7a11cc94ed9d763719d.jpeg', 'https://www.youtube.com/embed/ILAwV65XuGA?si=mh1NPL7ZhSCevXTO', 'História', '3h', 5);
 
 -- --------------------------------------------------------
 
@@ -78,7 +89,7 @@ INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `password`, `image`, `to
 (2, 'Gilvan', 'Santos', 'adm1@adm', '$2y$10$BHKEGwfqyhaynQ1ULihIIOrKeTQkpF4PUiS4Vzv7H/0dXp93jdUjO', NULL, '01354cda133ec9e532030e847118200561d2592e005dfed548d4f4e6cca1a92d77c222daf6c58a8be2c96d78af3161de365d', NULL),
 (3, 'Gilvan', 'Santos', 'adm2@adm', '$2y$10$LhgjZy/Y85qdbb8pN9rfz.SSIQTs4e6mhHJIAs9DlgnSxhUX.5CqO', NULL, '7016315b838a6d8d386a0168aca5f6b4498e6fa826d407929a0f41ebe7acde4a88041eb1b50d3b077807cdadc05b2edf4d8b', NULL),
 (4, 'Gilvan', 'Santos', 'adm3@adm', '$2y$10$kqlXkgJBFz1Gbx/vSkQGCOFCMojvL7x7.a/bSL00FtuKQ5qgXXcRe', NULL, '6469f97502fcc1a7bcbb2b9e22bc0395ed12e7176e4bc26fa9e54b445069a4689365d7ad24471fb1d7636ed40edf394408ee', NULL),
-(5, 'Gilvan', 'Santos', 'gilvanjr306@gmail.com', '$2y$10$XppbO.JlOBwNhhbeF8UMfeVjGBZMZXMHreBIxpKHlyDuixq3MAIum', NULL, '2e18b595d11e2b707620f0567daf4b8c697d330c1c79b6f2c101f55c2f3195d8fb7fda79ea059821c1d8fb1bab0c9a4e347b', NULL),
+(5, 'Gilvan', 'Santos', 'gilvanjr306@gmail.com', '$2y$10$XppbO.JlOBwNhhbeF8UMfeVjGBZMZXMHreBIxpKHlyDuixq3MAIum', NULL, '4df625fcaa5694ef9a49f9f0fcca675d82e19a4610031440418dbe5b401bd2fe15593efe9448958f77bd5166a5217226af67', NULL),
 (6, 'Gilvan', 'Santos', 'gilvanjr3106@gmail.com', '$2y$10$TruPwkxSNtcZ.lI9qbxcAOnvFQlSFe1ZnN5blaLsfk6qq8sKLrn1G', NULL, 'bb91793eca5bd3eabaccb387bac20d607c0a9c836612f12216939445fe83c70a22e066ed0b596b7ef2a969abcc2ed56e9e45', NULL),
 (7, 'Gilvan', 'Santos', 'gilvanjr31206@gmail.com', '$2y$10$nWx0uDwutBpexcxdifja0Og20PDnV/xnbDGCGJtPFVVd9dFqJnXTy', NULL, '2e77be96402bdb451788623807206be5ca3d4dfb101260d28e90e608101697aa01daf0fdb1f379204eceb6b01474af71280f', NULL),
 (8, '123@123', 'Sabtos', '123@123', '$2y$10$OCOGrUAZDIUZqdp9HsgfKug0puyl0gv.XWaa7.ffGtZpDh9Pm5KMW', NULL, '8b2c53c5dd6af72d3036940fdeb70a9446f040a1fdc174714068f5a751f1e49cc07798bfea29ceab782b104ddf17cf8e93d4', NULL),
@@ -123,7 +134,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `reviews`

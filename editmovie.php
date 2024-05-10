@@ -105,7 +105,7 @@
 
                     <div class="form-group">
                         <label for="description">Descrição</label>
-                        <textarea name="description" id="description" rows="5" class="form-control" placeholder="Descreva o filme...."><?= $movie->title ?></textarea>
+                        <textarea name="description" id="description" rows="5" class="form-control" placeholder="Descreva o filme...."><?= $movie->description ?></textarea>
                     </div>
 
                     <input type="submit" value="Editar filme" class="btn card-btn">
